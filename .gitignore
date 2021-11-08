@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pt
+*.model
+*.txt
+*.npz
+*.npy
+*.sh
+*.log
+*.cmd
