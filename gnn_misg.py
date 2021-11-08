@@ -6,7 +6,6 @@ from copy import deepcopy
 from attacks.rnd import RND
 from attacks.vanilla import Vanilla
 from attacks.speit import SPEIT
-from attacks.tdgia import TDGIA
 from attacks.pgd import PGD
 import argparse
 import os
@@ -25,7 +24,6 @@ from torch_geometric.datasets import Amazon, CitationFull, Coauthor, Planetoid
 from attacks.flag import flag
 from load_graph import generate_grb_split, generate_percent_split, generate_split
 from models.model_pyg import *
-from models.prognn import ProGNN
 from utils import prune_graph, set_rand_seed, inductive_split, get_index_induc, feat_normalize, target_select
 from load_graph import load_heter_g
 import timeit
@@ -36,8 +34,6 @@ else:
     base_dir = "../.datasets"
 
 def train(model, x, adj_t, y, train_idx, optimizer):
-    if type(model)==ProGNN:
-        model.train_adj(x,adj_t,y,train_idx)
     model.train()
 
     optimizer.zero_grad()
@@ -351,7 +347,7 @@ def main():
     if not args.batch_eval:
         args.batch_attacks = []
     else:
-        elif args.dataset.lower() in ["arxiv","grb-aminer","grb-reddit"] and not args.eval_target:
+        if args.dataset.lower() in ["arxiv","grb-aminer","grb-reddit"] and not args.eval_target:
             # non-target large graphs, all gradient-based methods have to be with seqgia
             args.batch_attacks = ["rnd","pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","speitml","atdgia","ratdgia","seqagia","seqragia"]
             report_batch = ["pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","speitml","atdgia","ratdgia","seqagia","seqragia"]
