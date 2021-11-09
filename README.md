@@ -29,10 +29,10 @@ Note that it is only a minimal implementation example, you can also implement HA
 - Generating Perturbed Graphs: 
 
 ```bash
-# Generating Perturbed Graph with `PGD`
+# Generating Perturbed Graph with PGD
 python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'gia' --grb_mode 'full' --num_layers 3 --runs 1 --disguise_coe 0
 
-# Generating Perturbed Graph with `PGD+HAO`
+# Generating Perturbed Graph with PGD+HAO
 python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'gia' --grb_mode 'full' --num_layers 3 --runs 1 --disguise_coe 1
 ```
 
