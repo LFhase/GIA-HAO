@@ -39,7 +39,7 @@ python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack '
 
 ```bash
 # Evaluating blackbox test robustness with GCN
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'gia' --grb_mode 'full' --num_layers 3 --runs 1
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'gia' --grb_mode 'full' --num_layers 3 --runs 1 --eval_robo_blk
 
 # Evaluating blackbox test robustness with EGuard
 python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'gia' --grb_mode 'full' --model 'egnnguard' --num_layers 3 --eval_robo_blk --runs 1

@@ -493,7 +493,7 @@ def main():
         model = GAT(data.num_features, args.hidden_channels,
                     num_classes, args.num_layers,
                     args.dropout, layer_norm_first=args.layer_norm_first,
-                    use_ln=args.use_ln, heads=heads,  att_dropout=att_dropout)
+                    use_ln=args.use_ln, heads=heads)
     elif args.model.lower() == "rgat":
         if args.dataset.lower() in ["arxiv",'grb-citeseer']:
             threshold = 0.2

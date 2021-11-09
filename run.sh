@@ -48,8 +48,9 @@ python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attac
 
 #metagia
 python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'meta' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 1 --use_ln 0
-cp atkg/grb-cora_metagia.pt atkg/grb-cora_rmetagia.pt   
+cp atkg/grb-cora_seqgia.pt atkg/grb-cora_rmetagia.pt   
 python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'meta' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0 --use_ln 0
+cp atkg/grb-cora_seqgia.pt atkg/grb-cora_metagia.pt
 
 python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'seqgia' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0 --use_ln 0 --branching
 
@@ -85,25 +86,25 @@ python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gnng
 
 # adv. training + without LNi
 python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gcn' --eval_robo_blk --use_ln 0 --batch_eval  --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'sage' --eval_robo_blk  --use_ln 0 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gat' --eval_robo_blk  --use_ln 0 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'egnnguard' --eval_robo_blk  --use_ln 0 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'rgat' --eval_robo_blk  --use_ln 1 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'robustgcn' --eval_robo_blk  --use_ln 0 --batch_eval --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'sage' --eval_robo_blk  --use_ln 0 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gat' --eval_robo_blk  --use_ln 0 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'egnnguard' --eval_robo_blk  --use_ln 0 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'rgat' --eval_robo_blk  --use_ln 1 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'robustgcn' --eval_robo_blk  --use_ln 0 --batch_eval  --m 100 --attack 'flag'
 
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gcn' --eval_robo_blk --layer_norm_first --use_ln 0 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'sage' --eval_robo_blk --layer_norm_first --use_ln 0 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gat' --eval_robo_blk --layer_norm_first --use_ln 0 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'rgat' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'egnnguard' --eval_robo_blk --layer_norm_first --use_ln 0 --batch_eval --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gcn' --eval_robo_blk --layer_norm_first --use_ln 0 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'sage' --eval_robo_blk --layer_norm_first --use_ln 0 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gat' --eval_robo_blk --layer_norm_first --use_ln 0 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'rgat' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'egnnguard' --eval_robo_blk --layer_norm_first --use_ln 0 --batch_eval  --m 100 --attack 'flag'
 
 # adv. training + LNi
 python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gcn' --eval_robo_blk --use_ln 1 --batch_eval  --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'sage' --eval_robo_blk  --use_ln 1 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gat' --eval_robo_blk  --use_ln 1 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'egnnguard' --eval_robo_blk  --use_ln 1 --batch_eval --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'sage' --eval_robo_blk  --use_ln 1 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gat' --eval_robo_blk  --use_ln 1 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'egnnguard' --eval_robo_blk  --use_ln 1 --batch_eval  --m 100 --attack 'flag'
 
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gcn' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'sage' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gat' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval --m 100 --attack 'flag'
-python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'egnnguard' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gcn' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'sage' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'gat' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval  --m 100 --attack 'flag'
+python gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo   --model 'egnnguard' --eval_robo_blk --layer_norm_first --use_ln 1 --batch_eval  --m 100 --attack 'flag'
