@@ -1,8 +1,9 @@
 # GIA-HAO
 >>
-This repo contains the code for reproducing results of ICLR'22 Anonymous Submission `UNDERSTANDING AND IMPROVING GRAPH INJECTION ATTACK BY PROMOTING UNNOTICEABILITY`
+This repo contains the sample code for reproducing results of ICLR'22 Paper *[Understanding and Improving Graph Injection Attack by Promoting Unnoticeability](https://openreview.net/forum?id=wkMG8cdvh7-)*.
 
-[PaperLink](https://openreview.net/forum?id=wkMG8cdvh7-)
+Full code and instructions will be released soon.
+
 
 ### Introduction
 We provide several ways to test with different GIA methods and combinations with HAO. 
@@ -57,3 +58,13 @@ mkdir atkg
 bash run.sh
 ```
 
+### Citation
+```bib
+@inproceedings{chen2022understanding,
+    title={Understanding and Improving Graph Injection Attack by Promoting Unnoticeability},
+    author={Yongqiang Chen and Han Yang and Yonggang Zhang and MA KAILI and Tongliang Liu and Bo Han and James Cheng},
+    booktitle={International Conference on Learning Representations},
+    year={2022},
+    url={https://openreview.net/forum?id=wkMG8cdvh7-}
+}
+```
