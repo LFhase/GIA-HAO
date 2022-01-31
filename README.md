@@ -62,7 +62,7 @@ bash run.sh
 ```bib
 @inproceedings{chen2022understanding,
     title={Understanding and Improving Graph Injection Attack by Promoting Unnoticeability},
-    author={Yongqiang Chen and Han Yang and Yonggang Zhang and MA KAILI and Tongliang Liu and Bo Han and James Cheng},
+    author={Yongqiang Chen and Han Yang and Yonggang Zhang and Kaili Ma and Tongliang Liu and Bo Han and James Cheng},
     booktitle={International Conference on Learning Representations},
     year={2022},
     url={https://openreview.net/forum?id=wkMG8cdvh7-}
