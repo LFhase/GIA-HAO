@@ -252,7 +252,7 @@ def main():
     # put a layer norm right after input
     parser.add_argument('--layer_norm_first', action="store_true")
     # put layer norm between layers or not
-    parser.add_argument('--use_ln', type=int,default=1)
+    parser.add_argument('--use_ln', type=int,default=0)
     parser.add_argument('--dropout', type=float, default=0.5)
     parser.add_argument('--lr', type=float, default=0.01)
     parser.add_argument('--l2decay', type=float, default=0.0)
