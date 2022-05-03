@@ -6,8 +6,11 @@ This repo contains the sample code for reproducing results of ICLR'22 Paper *[Un
 <!-- ![Unnoticeability](files/unnoticeability.png "Unnoticeability") -->
 
 ## Introduction
-Graph Injection Attack (GIA) recently emerge as a practical attack scenario. To understand it more, we conduct a friendly comparison between GIA and Graph Modification Attack (GMA) -- Another attack scenario widly studied in early works. Although
-we found that GIA can be provably more harmful than GMA under certain assumptions, the severe damage to the homophily makes it easily defendable by homophily defenders. Hence we introduced homophily unnoticeability for GIA to constrain the damage and proposed Harmonious Adversarial Objective (HAO) to mitigate this issue. If you are interested, find out more in our [paper](https://arxiv.org/pdf/2202.08057.pdf), [slides](https://lfhase.win/files/slides/GIA-HAO_short.pdf), or our [poster](files/poster.png)!
+Graph Injection Attack (GIA) recently emerges as a practical attack scenario. To understand it more, we conduct a friendly comparison between GIA and Graph Modification Attack (GMA) -- Another attack scenario widly studied in early works. We found that:
+- Although GIA can be provably more harmful than GMA under certain assumptions, the severe damage to the homophily makes it easily defendable by homophily defenders (even implemented in a very simple way), which would bring unreliable evaluation about GNNs' robustness.
+-  Hence we introduced homophily unnoticeability for GIA to constrain the damage and proposed Harmonious Adversarial Objective (HAO) to mitigate this issue. 
+  
+If you are interested, find out more in our [paper](https://arxiv.org/pdf/2202.08057.pdf), [slides](https://lfhase.win/files/slides/GIA-HAO_short.pdf), or our [poster](files/poster.png)!
 
 <!-- ![Unnoticeability](files/unnoticeability.png "Unnoticeability") -->
 
@@ -85,6 +88,13 @@ If you find this repo useful, please cite our paper:
     url={https://openreview.net/forum?id=wkMG8cdvh7-}
 }
 ```
+
 ## Misc
+Since our focus is to verify the issues surrounding the homophily unnoticeability,
+we didn't do exhaustive hyperparameter tuning with the injection strategies.
+We believe there are more interesting stuffs to navigate about these strategies,
+where we list a few in Appendix A of our paper. 
+Welcome to check it out and play with our code base!
+
 If you have any questions, please feel free to send me (Andrew) an
 email via: yqchen [at] cse (dot) cuhk (dot) edu (dot) hk.
