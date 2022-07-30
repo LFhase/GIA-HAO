@@ -47,9 +47,9 @@ cp atkg/grb-cora_agia.pt atkg/grb-cora_ragia.pt
 python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'agia' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0 --use_ln 0
 
 #metagia
-python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'meta' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 1 --use_ln 0
+python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'seqgia' --injection 'meta' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 1 --use_ln 0 --sequential_step 1.0
 cp atkg/grb-cora_seqgia.pt atkg/grb-cora_rmetagia.pt   
-python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'meta' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0 --use_ln 0
+python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'seqgia' --injection 'meta' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0 --use_ln 0 --sequential_step 1.0
 cp atkg/grb-cora_seqgia.pt atkg/grb-cora_metagia.pt
 
 python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'seqgia' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0 --use_ln 0 --branching
