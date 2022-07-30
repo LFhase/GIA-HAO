@@ -592,7 +592,7 @@ def main():
                         best_weights = deepcopy(model.state_dict())
                 # print(f'Epoch {epoch}: train acc: {train_acc}, best val: {best_val}, test acc: {final_test}')
             stop = timeit.default_timer()
-            tot_time = stop-start
+            tot_time += stop-start
         print(f'Run{run} train: {final_train_acc}, val:{best_val}, test:{final_test}')
         print(f'Avg train time {tot_time/args.epochs}')
         trains.append(final_train_acc)
