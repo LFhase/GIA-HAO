@@ -34,6 +34,13 @@ Note that it is only a minimal implementation example, you can also implement HA
 In experiments, we comprehensively examine the effectiveness of HAO with different combinations of various GIA methods, against *38* defense models on *6* benchmarks, under both non-target attack and targeted attack settings. To handle the extensive experiments, we implement both single test and batch test modes.
 
 ### Before Start
+The key libraries used in our experiments are:
+```
+grb==0.1.0
+torch==1.9.0
+torch-geometric==1.7.2
+```
+
 By default, all of the datasets can be loaded automatically, and be careful about the path settings in `load_graph.py`.
 All of the generated perturbed graph will be saved to `/atkg` and make sure the folder is valid.
 The perturbed graph will be named as `dataset_attack.pt` for non-targeted attack, and `dataset_attack_target.pt` for targeted attack.
