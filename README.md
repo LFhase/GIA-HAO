@@ -5,7 +5,7 @@
     <a href="https://github.com/LFhase/GIA-HAO"><img src="https://img.shields.io/badge/-Github-grey?logo=github" alt="Github"></a>
     <!-- <a href="https://colab.research.google.com/drive/1t0_4BxEJ0XncyYvn_VyEQhxwNMvtSUNx?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Colab"></a> -->
     <a href="https://openreview.net/forum?id=wkMG8cdvh7-"> <img alt="License" src="https://img.shields.io/static/v1?label=Pub&message=ICLR%2722&color=blue"> </a>
-    <a href="https://github.com/LFhase/GIA-HAO/blob/main/LICENSE"> <img alt="License" src="https://img.shields.io/github/license/Graph-Com/GSAT?color=blue"> </a>
+    <a href="https://github.com/LFhase/GIA-HAO/blob/main/LICENSE"> <img alt="License" src="https://img.shields.io/github/license/LFhase/GIA-HAO?color=blue"> </a>
     <a href="https://iclr.cc/virtual/2022/poster/6046"> <img src="https://img.shields.io/badge/Video-grey?logo=Kuaishou&logoColor=white" alt="Video"></a>
     <a href="https://lfhase.win/files/slides/GIA-HAO_short.pdf"> <img src="https://img.shields.io/badge/Slides-grey?&logo=MicrosoftPowerPoint&logoColor=white" alt="Slides"></a>
     <!-- <a href="https://github.com/LFhase/GIA-HAO/blob/master/files/poster.png"> <img src="https://img.shields.io/badge/Poster-grey?logo=airplayvideo&logoColor=white" alt="Poster"></a> -->
@@ -17,6 +17,11 @@ This repo contains the sample code for reproducing results of ICLR'22 Paper *[Un
 
 <!-- Full code and instructions will be released soon. -->
 <!-- ![Unnoticeability](files/unnoticeability.png "Unnoticeability") -->
+
+Updates:
+
+- July 23, 2022: We shared GIA-HAO in AI Time PhD Workshop for ICLR'22 (in Chinese)! The video link is [here](https://www.bilibili.com/video/BV1BW4y1672F?t=3251). 😆
+
 
 ## Introduction
 
