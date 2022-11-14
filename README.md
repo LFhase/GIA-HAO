@@ -69,7 +69,9 @@ The key libraries used in our experiments are:
 grb==0.1.0
 torch==1.9.0
 torch-geometric==1.7.2
+scipy==1.6.2
 ```
+More information about the dependencies can be found in this [issue](https://github.com/LFhase/GIA-HAO/issues/1#issuecomment-1313171725).
 
 By default, all of the datasets can be loaded automatically, and be careful about the path settings in `load_graph.py`.
 All of the generated perturbed graph will be saved to `/atkg` and make sure the folder is valid.
