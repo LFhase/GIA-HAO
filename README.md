@@ -69,6 +69,9 @@ The key libraries used in our experiments are:
 grb==0.1.0
 torch==1.9.0
 torch-geometric==1.7.2
+torch-scatter==2.0.8
+torch-sparse==0.6.11
+scipy==1.6.2
 ```
 
 By default, all of the datasets can be loaded automatically, and be careful about the path settings in `load_graph.py`.
