@@ -72,6 +72,7 @@ torch-geometric==1.7.2
 scipy==1.6.2
 ```
 More information about the dependencies can be found in this [issue](https://github.com/LFhase/GIA-HAO/issues/1#issuecomment-1313171725).
+If you are using the latest pytorch-geometric libraries and encounter some issues, you may check out this [issue](https://github.com/LFhase/GIA-HAO/issues/3#issue-2011056958) (Thanks Runlin Lei from RUC for the update).
 
 By default, all of the datasets can be loaded automatically, and be careful about the path settings in `load_graph.py`.
 All of the generated perturbed graph will be saved to `/atkg` and make sure the folder is valid.
