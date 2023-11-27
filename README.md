@@ -32,7 +32,7 @@ Graph Injection Attack (GIA) recently emerges as a practical attack scenario. To
   
 If you are interested, find out more in our [paper](https://arxiv.org/pdf/2202.08057.pdf), [slides](https://lfhase.win/files/slides/GIA-HAO_short.pdf), or our [poster](files/poster.png)!
 
-<p align="center"><img src="./files/unnoticeability.png" width=50% height=50%></p>
+<p align="center"><img src="./files/unnoticeability.png" width=80% height=80%></p>
 <p align="center"><em>Figure 1.</em> Illustration of GIA-HAO.</p>
 <!-- ![Unnoticeability](files/unnoticeability.png "Unnoticeability") -->
 
