@@ -11,7 +11,8 @@ python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attac
 
 #pgd
 python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'pgd' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0  --use_ln 0
-python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'rpgd' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 1 --use_ln 0
+# gia is rpgd
+# python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'rpgd' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 1 --use_ln 0
 
 #gia
 python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'gia' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 1 --use_ln 0
@@ -53,9 +54,6 @@ python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attac
 cp atkg/grb-cora_seqgia.pt atkg/grb-cora_metagia.pt
 
 python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'seqgia' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0 --use_ln 0 --branching
-
-#speitml
-python -u gnn_misg.py --dataset 'grb-cora'  --inductive --eval_robo --eval_attack 'speitml' --n_inject_max 60 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0  --use_ln 0
 
 
 # without LNi

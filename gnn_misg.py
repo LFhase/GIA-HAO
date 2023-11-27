@@ -349,16 +349,16 @@ def main():
     else:
         if args.dataset.lower() in ["arxiv","grb-aminer","grb-reddit"] and not args.eval_target:
             # non-target large graphs, all gradient-based methods have to be with seqgia
-            args.batch_attacks = ["rnd","pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","speitml","atdgia","ratdgia","seqagia","seqragia"]
-            report_batch = ["pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","speitml","atdgia","ratdgia","seqagia","seqragia"]
+            args.batch_attacks = ["rnd","pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","atdgia","ratdgia","seqagia","seqragia"]
+            report_batch = ["pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","atdgia","ratdgia","seqagia","seqragia"]
         elif args.eval_target:
             # targeted attack baselines
-            args.batch_attacks = ["vanilla","rnd","pgd","gia","seqpgd","rseqpgd","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","speitml","atdgia","ratdgia","agia","ragia","seqagia","seqragia"]
-            report_batch = ["vanilla","pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","speitml","atdgia","ratdgia","agia","ragia","seqagia","seqragia"]
+            args.batch_attacks = ["vanilla","rnd","pgd","gia","seqpgd","rseqpgd","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","atdgia","ratdgia","agia","ragia","seqagia","seqragia"]
+            report_batch = ["vanilla","pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","atdgia","ratdgia","agia","ragia","seqagia","seqragia"]
         else:
             # non-target small graphs
-            args.batch_attacks = ["rnd","pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","speitml","atdgia","ratdgia","agia","ragia","seqagia","seqragia"]
-            report_batch = ["pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","speitml","atdgia","ratdgia","agia","ragia","seqagia","seqragia"]
+            args.batch_attacks = ["rnd","pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","atdgia","ratdgia","agia","ragia","seqagia","seqragia"]
+            report_batch = ["pgd","gia","seqgia","rseqgia","metagia","rmetagia","tdgia","rtdgia","atdgia","ratdgia","agia","ragia","seqagia","seqragia"]
         assert len(report_batch) <= len(args.batch_attacks)
     if args.reprod:
         reproduction_info()
@@ -641,7 +641,7 @@ def main():
             for (i,atk) in enumerate(args.batch_attacks):
                 for j in range(max(args.mul_run,1)):
                     # not necessary to test vanilla, rnd, speit multiple times
-                    if j>=1 and atk.lower() in ["vanilla","rnd","speitml"]:
+                    if j>=1 and atk.lower() in ["vanilla","rnd"]:
                         continue
                     args.eval_attack = atk
                     x_attack, adj_attack, target_idx = eval_robustness(model, x_test, adj_test, target_idx, data.y,device, args, run=j)

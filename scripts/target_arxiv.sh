@@ -11,7 +11,8 @@ python -u gnn_misg.py --dataset 'arxiv' --grb_split --eval_target --inductive --
 
 #pgd
 python -u gnn_misg.py --dataset 'arxiv' --grb_split --eval_target --inductive --eval_robo  --eval_attack 'pgd' --n_inject_max 120 --n_edge_max 100 --grb_mode 'full' --runs 1 --disguise_coe 0
-python -u gnn_misg.py --dataset 'arxiv' --grb_split --eval_target --inductive --eval_robo  --eval_attack 'rpgd' --n_inject_max 120 --n_edge_max 100 --grb_mode 'full' --runs 1 --disguise_coe 2
+# gia is rpgd
+# python -u gnn_misg.py --dataset 'arxiv' --grb_split --eval_target --inductive --eval_robo  --eval_attack 'rpgd' --n_inject_max 120 --n_edge_max 100 --grb_mode 'full' --runs 1 --disguise_coe 2
 
 #gia
 python -u gnn_misg.py --dataset 'arxiv' --grb_split --eval_target --inductive --eval_robo  --eval_attack 'gia' --n_inject_max 120 --n_edge_max 100 --grb_mode 'full' --runs 1 --disguise_coe 2

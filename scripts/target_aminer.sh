@@ -11,7 +11,8 @@ python -u gnn_misg.py --dataset 'grb-aminer' --grb_split --eval_target --inducti
 
 #pgd
 python -u gnn_misg.py --dataset 'grb-aminer' --grb_split --eval_target --inductive --eval_robo  --eval_attack 'pgd' --n_inject_max 160 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0
-python -u gnn_misg.py --dataset 'grb-aminer' --grb_split --eval_target --inductive --eval_robo  --eval_attack 'rpgd' --n_inject_max 160 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0.5
+# gia is rpgd
+# python -u gnn_misg.py --dataset 'grb-aminer' --grb_split --eval_target --inductive --eval_robo  --eval_attack 'rpgd' --n_inject_max 160 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0.5
 
 #gia
 python -u gnn_misg.py --dataset 'grb-aminer' --grb_split --eval_target --inductive --eval_robo  --eval_attack 'gia' --n_inject_max 160 --n_edge_max 20 --grb_mode 'full' --runs 1 --disguise_coe 0.5
